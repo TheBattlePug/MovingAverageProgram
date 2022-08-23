@@ -56,8 +56,29 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="SqlSchemaCompare.scmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\WristData.sql" />
+    <Build Include="dbo\Tables\RawWristDataAsFormatted.sql" />
+    <Build Include="dbo\Tables\DataForProcessing.sql" />
+    <Build Include="dbo\Functions\SpeedY.sql" />
+    <Build Include="dbo\Functions\SpeedX.sql" />
+    <Build Include="dbo\Functions\MovingAverageYVelocity.sql" />
+    <Build Include="dbo\Functions\MovingAverageYAcceleration.sql" />
+    <Build Include="dbo\Functions\MovingAverageY.sql" />
+    <Build Include="dbo\Functions\MovingAverageXVelocity.sql" />
+    <Build Include="dbo\Functions\MovingAverageXAcceleration.sql" />
+    <Build Include="dbo\Functions\MovingAverageX.sql" />
+    <Build Include="dbo\Functions\CFC60.sql" />
+    <Build Include="dbo\Functions\AccelerationY.sql" />
+    <Build Include="dbo\Functions\AccelerationX.sql" />
+    <Build Include="dbo\Stored Procedures\Calculate.sql" />
   </ItemGroup>
 </Project>
